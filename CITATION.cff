@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use AerialStamp, please cite the paper below."
+title: "AerialStamp"
+version: 2.0.0
+authors:
+  - family-names: Mosig
+    given-names: Clemens
+  # TODO: co-authors
+repository-code: "https://github.com/cmosig/aerialstamp"
+license: CC-BY-4.0
+preferred-citation:
+  type: article
+  title: "AerialStamp: estimating the acquisition date of aerial orthophotos from the image and its Sentinel-2 time series"
+  authors:
+    - family-names: Mosig
+      given-names: Clemens
+    # TODO: co-authors
+  journal: "ISPRS Open Journal of Photogrammetry and Remote Sensing"
+  year: 2026  # TODO
+  doi: "TODO"

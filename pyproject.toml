@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aerialstamp"
+version = "2.0.0"
+description = "Estimate the acquisition date of an aerial (drone or airborne) orthophoto from the image and its Sentinel-2 time series"
+readme = "README.md"
+# sentle (Sentinel-2 download) requires Python >= 3.12
+requires-python = ">=3.12"
+license = { text = "CC-BY-4.0" }
+authors = [{ name = "Clemens Mosig" }]
+keywords = ["aerial imagery", "drone", "orthophoto", "acquisition date", "Sentinel-2", "phenology", "deadtrees.earth"]
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "torch",
+  "timm>=1.0",
+  "rasterio>=1.3",
+  "shapely>=2",
+  "pyogrio",
+  "xarray",
+  "zarr",
+  "sentle",
+  "matplotlib",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+aerialstamp = "aerialstamp.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/cmosig/aerialstamp"
+"deadtrees.earth" = "https://deadtrees.earth"
+
+[tool.setuptools.packages.find]
+include = ["aerialstamp*"]
+
+[tool.setuptools.package-data]
+aerialstamp = ["weights/*.json", "weights/*/*.pt"]
